@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Compound Interest Calculator!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Compound Interest Calculator</h1><br />
+            <h2>Determine how much your money can grow using the power of compound interest.</h2>
+        </header>
+
+        <div class="input_form">
+            <div class="step_description">
+                <p>Step 1: Initial Investment</p>
+            </div>
+            <div class="step_input">
+                <span>Initial Investment*</span><input type="text" id="initial_investment" /><br />
+                <p>Amount of money that you have available to invest initially.</p>
+            </div>
+
+            <div class="step_description">
+                <p>Step 2: Contribute</p>
+            </div>
+            <div class="step_input">
+                <span>Monthly Contribution</span><input type="text" id="contributions" /><br />
+                <p>Amount that you plan to add to the principle every month.</p><br />
+                <span>Length of Time in Years *</span><input type="text" id="time" /><br />
+                <p>Length of time, in years, that you plan to let your money grow.</p>
+            </div>
+
+            <div class="step_description">
+                <p>Step 3: Interest Rate</p>
+            </div>
+            <div class="step_input">
+                <span>Estimated Interest Rate *</span><input type="text" id="interest" /><br />
+                <p>Your estimated annual interest rate.</p>
+            </div>
+
+            <div class="step_description">
+                <p>Step 4: Compound It</p>
+            </div>
+            <div class="step_input">
+                <span>Compound Frequency</span>
+                <select id="frequency">
+                    <option id="comp_annual">Annually</option>
+                    <option id="comp_semi">Semi-Annually</option>
+                    <option id="comp_quarter">Quarterly</option>
+                    <option id="comp_monthly">Monthly</option>
+                    <option id="comp_weekly">Weekly</option>
+                    <option id="comp_daily">Daily</option>
+                </select>
+                <p>Amount of money that you have available to invest initially.</p>
+            </div>
+
+            <div class="last_step">
+               
+                <button class="button" id="input_button"><span>CALCULATE</span></button>
+  
+                <button class="button" id="reset_button"><span>RESET</span></button>
+              
+            </div>
+
+
+        </div>
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>

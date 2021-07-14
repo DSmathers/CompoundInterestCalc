@@ -1,0 +1,58 @@
+*   {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.input_form {
+    border: 1px solid black;
+    margin: 5px 5px;
+    position: relative;
+}
+header  {
+    background-color: white;
+    color:00325b;
+    text-align: center;
+    padding: 10px;
+}
+
+header > h2{
+    font-size: 18px;
+}
+
+.step_description  {
+    background-color: #00325b;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 5px 0px;
+}
+
+.step_input {
+    background-color: white;
+    color: 00325b;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.step-input > span{
+    font-size: 50px;
+}
+
+.last_step  {
+    background-color: #00325b;
+    color:white;
+    text-align: center;
+    padding: 15px;
+}
+
+.button {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 2px solid white;
+    text-align: center;
+}
+
+.button:hover{
+    cursor: pointer;
+}
