@@ -8,11 +8,15 @@
 // PMT = regular monthly contributions.
 
 function calculate(p, m, t, r, n)   {
-    // working formula for simple compound interest with no contributions, compounded annually
-    // output is incorrect if compound frequency is changed. 
- 
-    let testValue = p * Math.pow(1 + r/n, n * t);
-    console.log(testValue.toFixed(2));
+   
+    // Working formula for simple interest including principle and compounding. No contributions yet. 
+    let noContribute = p * Math.pow(1 + r/n, n * t);
+   
+    // Populates an empty div called answer_display with the answer
+    document.getElementById('answer_display').innerHTML = 
+    "<h2>" + 'The Results Are In' + '</h2><br /> ' +
+    "<span>" + 'In ' + t + ' years, you will have $' + noContribute.toFixed(2);  
+    
 
     //let compoundedValue = p * ( 1 + r / n ) ** n * t + (m * (1 + (r / n ) ** n * t - 1)) / (r / n);
     //console.log(compoundedValue);
@@ -59,12 +63,14 @@ function get_values()    {
     calculate(initialDeposit, monthlyContribution, timeToGrow, interest, frequency);
 }
 
+// Clears the form and depopulates the answer div
 let clear_values = clear_values => {
     document.getElementById('initial_investment').value = '';
     document.getElementById('contributions').value = '';
     document.getElementById('time').value = '';
     document.getElementById('interest').value = '';
     document.getElementById('frequency').value = 'Annually';
+    document.getElementById('answer_display').innerHTML = '';
 };
 
 

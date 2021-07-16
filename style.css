@@ -6,8 +6,9 @@
 
 .input_form {
     border: 1px solid black;
-    margin: 5px 5px;
+    margin: auto;
     position: relative;
+    max-width: 500px;
 }
 header  {
     background-color: white;
@@ -55,4 +56,12 @@ header > h2{
 
 .button:hover{
     cursor: pointer;
+}
+
+
+#answer_display {
+    background-color: #00325b;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
