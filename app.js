@@ -12,6 +12,8 @@ function calculate(p, m, t, r, n)   {
     // Working formula for simple interest including principle and compounding. No contributions yet. 
     let noContribute = p * Math.pow(1 + r/n, n * t);
    
+    
+   
     // Populates an empty div called answer_display with the answer
     document.getElementById('answer_display').innerHTML = 
     "<h2>" + 'The Results Are In' + '</h2><br /> ' +
@@ -54,7 +56,9 @@ function get_values()    {
     }
 
     else frequency = 365;
-    monthlyContribution *= 12;
+
+    /* Deleting this change to monthlyContribution temporarily to see if that solves my problem
+    monthlyContribution *= 12; */
 
     // Need to divide user provided interest by 100 to get APR.
 
