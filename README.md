@@ -2,11 +2,8 @@
 ## Inspired from Investor.gov
 
 Currently under construction.
+Working with or without contributions using monthly compounding option
 
 To Do:
 
-1: Complete calculate function in app.js file to include monthly contributions.
-2: Create a new element or popup window that displays the results. 
-*At this point the calculator will be complete but as I learn more JS, I plan to add more functionality 
-comparable to the one seen on investor.gov. 
- 
+1: Add functionality so that other compounding frequencies work. 
