@@ -8,17 +8,58 @@
 // PMT = regular monthly contributions.
 
 function calculate(p, m, t, r, n)   {
-   
     // Working formula for simple interest including principle and compounding. No contributions yet. 
     let noContribute = p * Math.pow(1 + r/n, n * t);
    
-    
+    // Testing Stuff Here
+
+    var currentPrinciple = p;
+    var anArray = [];
+    function getInterest(r) {
+        return (currentPrinciple * r)/12;
+    }
+
+    // I couldn't figure out how to get the formula to work here in javascript so i resorted
+    //to a loop. the first index (0) is just the principle amount. after that each iteration
+    // adds interest earned and contributions and updates currentPrinciple for the next iteration
+    function monthlyCompounding()   {
+        for(let i = 0; i <= t * 12; i++) {
+            if(i === 0 )    {anArray.push(currentPrinciple)}
+            else{
+            currentPrinciple = (currentPrinciple*1 + m*1) + getInterest(r);
+            anArray.push(currentPrinciple.toFixed(2));}
+
+        }
+        return anArray;
+    }
+
+    // Runs through array from monthlyCompounding function and returns every 12th
+    // result to display annual results later
+    function getYears() {
+        let thisArray = monthlyCompounding();
+        let thatArray = [];
+        for(let i = 0; i<thisArray.length; i++) {
+            if(i % 12 === 0)    {
+                thatArray.push(thisArray[i]);     
+            }
+            else continue;
+        }
+        return thatArray;
+    }
+    // Returns the last value in the array which is the future value of the investments
+    function getFutureValue()  {
+        let thisArray = getYears();
+        return thisArray[thisArray.length - 1];
+    }
+
+   
+    // End of Testing Stuff
    
     // Populates an empty div called answer_display with the answer
     document.getElementById('answer_display').innerHTML = 
     "<h2>" + 'The Results Are In' + '</h2><br /> ' +
-    "<span>" + 'In ' + t + ' years, you will have $' + noContribute.toFixed(2);  
-    
+    "<span>" + 'In ' + t + ' years, you will have $' + getFutureValue();  
+
 
     //let compoundedValue = p * ( 1 + r / n ) ** n * t + (m * (1 + (r / n ) ** n * t - 1)) / (r / n);
     //console.log(compoundedValue);
