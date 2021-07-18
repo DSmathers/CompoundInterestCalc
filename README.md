@@ -1,10 +1,13 @@
 # Compound Interest Calculater
 ## Inspired from Investor.gov
 
-Currently under construction.
-Working with or without contributions using monthly compounding option
+Allows you to calculate the estimated future value of an investment or savings account 
+based on principle, interest rate, contributions, length of time, and compound frequency. 
 
-To Do:
+I used basic HTML and CSS for the UI, did not spend much time on this.
+Javascript is used for logic and displaying the answer after calculations. 
 
-1: Add functionality so that other compounding frequencies work. 
+
+I struggled implementing the math formula for compound interest + contributions in javascript
+and ended up resorting to if loops. 
 
